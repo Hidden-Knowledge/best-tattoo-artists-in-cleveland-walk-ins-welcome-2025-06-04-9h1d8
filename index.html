@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cleveland's Best Tattoo Artists | Walk-Ins Welcome</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.5s ease-in;
+        }
+    </style>
 </head>
 <body class="font-sans antialiased">
     <!-- Announcement Bar -->
@@ -17,21 +34,32 @@
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
             <div class="flex items-center">
-                <a href="/" class="text-2xl font-bold">CLE Tatted</a>
+                <a href="https://Hidden-Knowledge.github.io/best-tattoo-artists-in-cleveland-walk-ins-welcome-2025-06-04-9h1d8" class="text-2xl font-bold hover:text-gray-700 transition-colors duration-300">CLE Tatted</a>
             </div>
             
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#" class="hover:text-gray-600 transition-colors duration-300">Artists</a>
-                <a href="#" class="hover:text-gray-600 transition-colors duration-300">Gallery</a>
-                <a href="#" class="hover:text-gray-600 transition-colors duration-300">Pricing</a>
-                <a href="#" class="hover:text-gray-600 transition-colors duration-300">Contact</a>
-                <a href="https://stripe.com" class="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors duration-300">Book Now</a>
+                <a href="#artists" class="hover:text-gray-600 transition-colors duration-300">Artists</a>
+                <a href="#gallery" class="hover:text-gray-600 transition-colors duration-300">Gallery</a>
+                <a href="#pricing" class="hover:text-gray-600 transition-colors duration-300">Pricing</a>
+                <a href="#contact" class="hover:text-gray-600 transition-colors duration-300">Contact</a>
+                <a href="https://stripe.com" class="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-all duration-300 transform hover:scale-105">Book Now</a>
             </div>
             
-            <button class="md:hidden">
+            <button class="mobile-menu-button md:hidden" aria-label="Toggle menu">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white w-full absolute top-full left-0 shadow-lg">
+            <div class="px-4 py-2 space-y-4">
+                <a href="#artists" class="block py-2 hover:bg-gray-100 transition-colors duration-300">Artists</a>
+                <a href="#gallery" class="block py-2 hover:bg-gray-100 transition-colors duration-300">Gallery</a>
+                <a href="#pricing" class="block py-2 hover:bg-gray-100 transition-colors duration-300">Pricing</a>
+                <a href="#contact" class="block py-2 hover:bg-gray-100 transition-colors duration-300">Contact</a>
+                <a href="https://stripe.com" class="block py-2 bg-black text-white text-center rounded-full hover:bg-gray-800 transition-colors duration-300">Book Now</a>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -42,40 +70,56 @@
         </div>
         
         <div class="relative h-full flex items-center justify-center text-center text-white px-4">
-            <div class="max-w-4xl">
+            <div class="max-w-4xl animate-fadeIn">
                 <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Best Tattoo Artists in Cleveland<br>Walk-Ins Welcome</h1>
                 <p class="text-xl md:text-2xl mb-8">Where Cleveland Gets Tattooed — Walk Right In.</p>
-                <a href="https://stripe.com" class="inline-block bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-200 transform hover:scale-105 transition-all duration-300">Book Your Session</a>
+                <a href="https://stripe.com" class="inline-block bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-200 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">Book Your Session</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-24 bg-white" id="about">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12">About CLE Tatted</h2>
+            <div class="space-y-8">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Founded in 2015 by master tattoo artist Mike Stevens, CLE Tatted began as a small studio dedicated to bringing world-class tattoo artistry to Cleveland. What started as a two-artist shop has grown into Cleveland's premier tattoo destination, known for our commitment to excellence and customer satisfaction.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Our mission is to provide exceptional tattoo artistry in a welcoming, professional environment where creativity flourishes and clients' visions come to life. We value artistic integrity, safety, and customer satisfaction above all else, ensuring every client leaves our studio proud of their new piece of art.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-24 bg-white">
+    <section class="py-24 bg-gray-50" id="features">
         <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16">Why Choose Us</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-102">
                     <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mb-6">
                         <i class="fas fa-paint-brush text-white text-2xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Custom Designs</h3>
-                    <p class="text-gray-600">Unique artwork tailored to your vision and style.</p>
+                    <p class="text-gray-600">Expert artists work with you to create unique, personalized artwork that perfectly captures your vision. From simple designs to complex masterpieces, we bring your ideas to life.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-102">
                     <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mb-6">
                         <i class="fas fa-door-open text-white text-2xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Walk-Ins Welcome</h3>
-                    <p class="text-gray-600">Spontaneous ink? We've got you covered.</p>
+                    <p class="text-gray-600">Spontaneous decisions welcome! Our talented team is ready to take on walk-in clients, providing quick, professional service without compromising on quality or safety.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-102">
                     <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mb-6">
                         <i class="fas fa-award text-white text-2xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Award-Winning Artists</h3>
-                    <p class="text-gray-600">Cleveland's finest tattoo professionals.</p>
+                    <p class="text-gray-600">Our team includes some of Cleveland's most recognized tattoo artists, with multiple awards and features in national tattoo magazines. Experience matters, and our artists bring decades of combined expertise.</p>
                 </div>
             </div>
         </div>
@@ -88,11 +132,11 @@
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
                     <h2 class="text-4xl font-bold mb-6">Express Yourself Boldly</h2>
-                    <p class="text-gray-600 mb-8">Turn your ideas into stunning artwork that tells your story.</p>
-                    <a href="https://stripe.com" class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors duration-300">Start Your Journey</a>
+                    <p class="text-gray-600 mb-8">Transform your personal story into stunning, permanent artwork that speaks volumes. Our artists specialize in translating your ideas into masterful designs that not only look incredible but hold deep personal meaning. Whether it's your first tattoo or your fiftieth, we ensure every piece is a perfect expression of your individuality.</p>
+                    <a href="https://stripe.com" class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">Start Your Journey</a>
                 </div>
                 <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" alt="Tattoo Artist Working" class="rounded-xl shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" alt="Tattoo Artist Working" class="rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
                 </div>
             </div>
         </div>
@@ -103,12 +147,12 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col-reverse md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" alt="Local Artist" class="rounded-xl shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" alt="Local Artist" class="rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
                 </div>
                 <div class="md:w-1/2">
                     <h2 class="text-4xl font-bold mb-6">Support Local Artists</h2>
-                    <p class="text-gray-600 mb-8">Your art comes from Cleveland's most talented creators.</p>
-                    <a href="https://stripe.com" class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors duration-300">Meet Our Artists</a>
+                    <p class="text-gray-600 mb-8">By choosing CLE Tatted, you're supporting Cleveland's vibrant artistic community. Our artists are deeply rooted in the local scene, bringing years of experience and a genuine passion for their craft. Each artist brings their unique style and perspective, ensuring you get a truly original piece that couldn't be created anywhere else.</p>
+                    <a href="https://stripe.com" class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">Meet Our Artists</a>
                 </div>
             </div>
         </div>
@@ -120,43 +164,113 @@
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
                     <h2 class="text-4xl font-bold mb-6">No Wait Time</h2>
-                    <p class="text-gray-600 mb-8">Walk in today and leave with amazing artwork.</p>
-                    <a href="https://stripe.com" class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors duration-300">Visit Us Now</a>
+                    <p class="text-gray-600 mb-8">Life doesn't always follow a schedule, and neither do we. Our efficient booking system and walk-in availability mean you can get your new tattoo when inspiration strikes. Our experienced team maintains the perfect balance of quick service and meticulous attention to detail, ensuring you get premium quality without the long wait.</p>
+                    <a href="https://stripe.com" class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">Visit Us Now</a>
                 </div>
                 <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" alt="Tattoo Shop" class="rounded-xl shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" alt="Tattoo Shop" class="rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16">Client Stories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The attention to detail was incredible. My sleeve turned out better than I could have imagined. Mike really listened to what I wanted and added his artistic touch to create something unique."</p>
+                    <p class="font-bold">Sarah Johnson</p>
+                    <p class="text-sm text-gray-500">Marketing Executive</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Walked in for a small piece and was amazed by how quickly they could accommodate me. The studio is super clean and professional."</p>
+                    <p class="font-bold">James Martinez</p>
+                    <p class="text-sm text-gray-500">Local Business Owner</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Had my first tattoo done here and couldn't be happier. The team made me feel comfortable and explained everything thoroughly. The healing process was exactly as they described."</p>
+                    <p class="font-bold">Emily Chen</p>
+                    <p class="text-sm text-gray-500">Software Developer</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"I've been to many tattoo shops across the country, and CLE Tatted is among the best. Their custom work is outstanding, and their prices are fair for the quality you receive."</p>
+                    <p class="font-bold">Michael Thompson</p>
+                    <p class="text-sm text-gray-500">Professional Musician</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-24 bg-gray-50">
+    <section class="py-24 bg-white" id="faq">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
             <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-white rounded-xl shadow-md p-6">
+                <div class="bg-gray-50 rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
                     <h3 class="text-xl font-bold mb-4">How much does a tattoo cost?</h3>
-                    <p class="text-gray-600">Pricing varies based on size, complexity, and placement. Contact us for a custom quote.</p>
+                    <p class="text-gray-600">Pricing varies based on size, complexity, and placement. Small pieces start at $100, while larger custom work is priced by the hour. We provide detailed quotes during consultations to ensure transparency.</p>
                 </div>
-                <div class="bg-white rounded-xl shadow-md p-6">
+                <div class="bg-gray-50 rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-bold mb-4">What should I expect during my first tattoo session?</h3>
+                    <p class="text-gray-600">Your artist will review the design, placement, and sizing with you. They'll prepare the area, transfer the design, and guide you through the process. Sessions can last anywhere from 30 minutes to several hours, depending on the piece.</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
                     <h3 class="text-xl font-bold mb-4">Do you accept walk-ins?</h3>
-                    <p class="text-gray-600">Yes! We welcome walk-ins during our business hours.</p>
+                    <p class="text-gray-600">Yes! We welcome walk-ins during our business hours (10 AM - 8 PM, Tuesday through Saturday). While availability varies, we'll do our best to accommodate you or schedule a future appointment.</p>
                 </div>
-                <div class="bg-white rounded-xl shadow-md p-6">
+                <div class="bg-gray-50 rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
                     <h3 class="text-xl font-bold mb-4">What about aftercare?</h3>
-                    <p class="text-gray-600">We provide detailed aftercare instructions and are available for follow-up questions.</p>
+                    <p class="text-gray-600">We provide detailed written and verbal aftercare instructions. This includes cleaning procedures, moisturizing recommendations, and activities to avoid. We're available for follow-up questions and offer free touch-ups within the first month if needed.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-24 bg-black text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-8">Ready to Get Inked?</h2>
-            <p class="text-xl mb-12">Walk in today or book your appointment online.</p>
-            <a href="https://stripe.com" class="inline-block bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-200 transform hover:scale-105 transition-all duration-300">Book Now</a>
+    <section class="relative py-24 bg-black text-white overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1590246815117-c7c7bb8e9b039?w=1600&h=900&fit=crop&q=80" alt="Tattoo Studio Background" class="w-full h-full object-cover opacity-20">
+        </div>
+        <div class="relative container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">Ready to Get Inked?</h2>
+            <p class="text-xl mb-12 max-w-2xl mx-auto">Transform your ideas into stunning artwork. Walk in today or book your appointment online for a guaranteed session time.</p>
+            <div class="space-x-4">
+                <a href="https://stripe.com" class="inline-block bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-200 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">Book Now</a>
+                <a href="#contact" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-black transform hover:scale-105 transition-all duration-300">Contact Us</a>
+            </div>
         </div>
     </section>
 
@@ -167,24 +281,33 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">CLE Tatted</h3>
                     <p class="text-gray-400">Where Cleveland Gets Tattooed</p>
+                    <div class="mt-4">
+                        <p class="text-gray-400">123 Main Street</p>
+                        <p class="text-gray-400">Cleveland, OH 44113</p>
+                    </div>
                 </div>
                 <div>
                     <h4 class="text-lg font-bold mb-4">Contact</h4>
-                    <p class="text-gray-400">info@cletatted.com</p>
+                    <p class="text-gray-400">Phone: (216) 555-0123</p>
+                    <p class="text-gray-400">Email: info@cletatted.com</p>
+                    <p class="text-gray-400">Hours: Tue-Sat 10AM-8PM</p>
                 </div>
                 <div>
                     <h4 class="text-lg font-bold mb-4">Follow Us</h4>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-instagram text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-facebook text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-twitter text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-tiktok text-2xl"></i></a>
                     </div>
                 </div>
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li><a href="https://Hidden-Knowledge.github.io/best-tattoo-artists-in-cleveland-walk-ins-welcome-2025-06-04-9h1d8/privacy.html" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="https://Hidden-Knowledge.github.io/best-tattoo-artists-in-cleveland-walk-ins-welcome-2025-06-04-9h1d8/terms.html" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="https://Hidden-Knowledge.github.io/best-tattoo-artists-in-cleveland-walk-ins-welcome-2025-06-04-9h1d8/blog.html" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors duration-300">FAQ</a></li>
                     </ul>
                 </div>
             </div>
@@ -193,5 +316,36 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
 </body>
 </html>
